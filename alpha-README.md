@@ -53,11 +53,15 @@ for notes on dependencies that must be installed before beginning.
   bitcoin_url = "http://user:pass@127.0.0.1:18332"
 ```
 6\. Use sidechain-manipulation.py:
+    This generates a bitcoin address to send bitcoin into for our sidechain-wallet
 ```bash
   [matt@2ca87f82dd9a bitcoin]$ cd elements
   [matt@2ca87f82dd9a bitcoin]$ ./contrib/sidechain-manipulation.py generate-one-of-one-multisig sidechain-wallet
   One-of-one address: 22E8NxAdeYCatCFXFeLUbhfzBxUioGxP3dk9VH849exka9umWLkxzRmFFEwsLKR1pjPeE8UZRkVEQ7uab
   P2SH address: 2NCs5ufweTL8VHKNT6wrZMTkrnnmpZCy99j
+```
+  This sends 1 BTC to the addres `2N3..` 
+```bash
   [matt@2ca87f82dd9a bitcoin]$ ./contrib/sidechain-manipulation.py send-to-sidechain 2NCs5ufweTL8VHKNT6wrZMTkrnnmpZCy99j 1
   Sending 1 to 2N3zXjbwdTcPsJiy8sUK9FhWJhqQCxA8Jjr...
   (nonce: 94ffbf32c1f1c0d3089b27c98fd991d5)
